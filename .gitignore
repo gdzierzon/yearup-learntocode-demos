@@ -1,0 +1,13 @@
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+target/
+out/
+
+# local env files
+.env.local
+.env.*.local
+
