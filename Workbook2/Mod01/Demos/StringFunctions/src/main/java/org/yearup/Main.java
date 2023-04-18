@@ -8,6 +8,10 @@ public class Main
 
     public static void main(String[] args)
     {
+        String productCode = "CLTH-KIDS-1299";
+
+        String department = productCode.substring(5,9); //substring here
+        System.out.println(department);
 //        compareStrings();
 //        compareEqualsStrings();
 //        compareEqualsIgnoreCaseStrings();
@@ -57,6 +61,7 @@ public class Main
         System.out.println("Length: " + length);
 
         // trim
+        // 1
         System.out.println();
         String username = " danaw     ";
         System.out.println("Before trim: --" + username + "--");
@@ -64,12 +69,14 @@ public class Main
         System.out.println("After trim: --" + username + "--");
 
         // toUpperCase
+        // 2
         System.out.println();
         System.out.println("Before toUpperCase: " + username);
         username = username.toUpperCase();
         System.out.println("After toUpperCase: " + username);
 
         // chaining methods
+        // 3
         System.out.println();
         username = " danaw      ";
         System.out.println("Before trim and toUpperCase: --" + username + "--");
@@ -77,6 +84,7 @@ public class Main
         System.out.println("After trim and toUpperCase: --" + username + "--");
 
         // toLowerCase
+        // 4
         System.out.println();
         String state = "New Mexico";
         System.out.println("Before toLowerCase: " + state);
@@ -84,6 +92,7 @@ public class Main
         System.out.println("After toLowerCase: " + state);
 
         // startsWith
+        // 5
         System.out.println();
         String discountCode = "FAIR-15Off";
         System.out.println("Code: " + discountCode);
@@ -106,6 +115,7 @@ public class Main
         }
 
         // endsWith
+        // 6
         System.out.println();
         System.out.println("Code: " + discountCode);
         discountCode = "SAVE-50";
@@ -119,6 +129,7 @@ public class Main
         }
 
         // charAt
+        // 7
         System.out.println();
         String trackingCode = "USA-12981-Y-22";
         char hasShipped = trackingCode.charAt(10);
@@ -126,6 +137,7 @@ public class Main
         System.out.println("Has shipped: " + hasShipped);
 
         // indexOf
+        // 8
         System.out.println();
         String productCode = "ACME-12213";
         System.out.println("Code: " + productCode);
@@ -135,6 +147,7 @@ public class Main
         System.out.println("Period of dash: " + periodPosition);
 
         // substring
+        // 9
         System.out.println();
         System.out.println("Code: " + productCode);
         int dashIndex = productCode.indexOf("-");
