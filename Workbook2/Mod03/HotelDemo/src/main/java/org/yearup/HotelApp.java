@@ -5,8 +5,10 @@ import java.util.Scanner;
 public class HotelApp
 {
     static Scanner scanner = new Scanner(System.in);
+
     static Hotel[] hotels;
 
+    // manages the flow of the application
     public static void main(String[] args)
     {
         // add products to the array before running the program
@@ -18,11 +20,13 @@ public class HotelApp
 
             if(selection == 1)
             {
-                // display all products
+                // display all hotels
+                displayAllHotels();
             }
             else if(selection == 2)
             {
-                // search by category
+                // search by state
+                searchByState();
             }
             else if(selection == 3)
             {
@@ -42,6 +46,7 @@ public class HotelApp
 
     }
 
+    // creating the hotels array
     private static void createInventory()
     {
         hotels = new Hotel[10];
@@ -57,6 +62,7 @@ public class HotelApp
         hotels[9] = new Hotel(10,"Residence Inn - San Diego","CA",179.99);
     }
 
+    // show home screen and get the user option
     public static int displayHomeScreen()
     {
         System.out.println();
@@ -69,5 +75,38 @@ public class HotelApp
         scanner.nextLine();
 
         return selection;
+    }
+
+    // show list of all hotels
+    public static void displayAllHotels()
+    {
+        System.out.println();
+        System.out.println("All Hotels");
+        System.out.println("---------------------");
+        for (int i = 0; i < hotels.length; i++)
+        {
+            Hotel hotel = hotels[i];
+            System.out.println(hotel.getName());
+        }
+    }
+
+    // get user input for state, and display only hotels in that state
+    public static void searchByState()
+    {
+        System.out.println();
+        System.out.print("Enter the state abbreviation: ");
+        String state = scanner.nextLine().strip();
+
+        System.out.println("All Hotels in: " + state);
+        System.out.println("---------------------");
+        for (int i = 0; i < hotels.length; i++)
+        {
+            Hotel hotel = hotels[i];
+            // only include hotels in the state that the user entered
+            if(state.equalsIgnoreCase(hotel.getState()))
+            {
+                System.out.println(hotel.getName() + " -- " + hotel.getState());
+            }
+        }
     }
 }
