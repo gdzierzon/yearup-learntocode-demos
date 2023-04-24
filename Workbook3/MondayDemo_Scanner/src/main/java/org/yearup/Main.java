@@ -9,15 +9,15 @@ public class Main
     public static void main(String[] args) throws Exception
     {
         // scanner that reads from System.in Stream
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.print("What is your name? ");
-//        String name = scanner.nextLine();
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the name of the file you want to read: ");
+        String fileName = scanner.nextLine();
 
         System.out.println();
 
         // Read from a file
         // 1. open file and convert to a stream
-        FileInputStream fileStream = new FileInputStream("mary_had_a_little_lamb.txt");
+        FileInputStream fileStream = new FileInputStream(fileName);
         // 1b. create scanner from stream
         Scanner fileScanner = new Scanner(fileStream);
 
