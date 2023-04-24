@@ -174,7 +174,7 @@ public class HotelApp
         System.out.println("Add Hotel");
         System.out.println("---------------------------------------------------------------");
 
-        if(counter >= hotels.length)
+        if(counter + 1 >= hotels.length)
         {
             System.out.println();
             System.out.println("The list is already full. You cannot add another hotel.");
