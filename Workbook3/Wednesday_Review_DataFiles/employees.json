@@ -1,0 +1,23 @@
+[
+  {
+    "id": 10,
+    "name": "Dana Wyatt",
+    "hours-worked": 52.5,
+    "pay-rate": 12.50,
+    "addresses": [
+      {
+        "type": "home",
+        "street": "123 Main",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75010"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Ezra Aiden",
+    "hours-worked": 17,
+    "pay-rate": 16.75
+  }
+]

@@ -1,0 +1,23 @@
+<employees>
+    <employee>
+        <id>10</id>
+        <name>Dana Wyatt</name>
+        <hours-worked>52.5</hours-worked>
+        <pay-rate>12.50</pay-rate>
+        <addresses>
+            <address>
+                <type>home</type>
+                <street>123 Main</street>
+                <city>Dallas</city>
+                <state>TX</state>
+                <zip>75010</zip>
+            </address>
+        </addresses>
+    </employee>
+    <employee>
+        <id>20</id>
+        <name>Ezra Aiden</name>
+        <hours-worked>17</hours-worked>
+        <pay-rate>16.75</pay-rate>
+    </employee>
+</employees>

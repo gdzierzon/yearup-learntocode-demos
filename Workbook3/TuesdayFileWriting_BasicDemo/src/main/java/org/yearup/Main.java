@@ -34,14 +34,14 @@ public class Main
         finally
         {
             // 3 - close the file
-            if(fileWriter != null)
+            // this will throw an exception if fileWriter is null, or if it is not open
+            try
             {
-                try
-                {
-                    fileWriter.close();
-                }
-                // swallow the unnecessary exception
-                catch(Exception e){}
+                fileWriter.close();
+            }
+            catch(Exception ex)
+            {
+                // swallow the exception
             }
         }
     }
