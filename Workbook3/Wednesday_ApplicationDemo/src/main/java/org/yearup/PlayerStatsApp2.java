@@ -2,12 +2,13 @@ package org.yearup;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
-public class PlayerStatsApp
+public class PlayerStatsApp2
 {
-
-    private Player[] players = new Player[10];
+    private ArrayList<Player> players = new ArrayList<>();
 
     public void run()
     {
@@ -16,23 +17,12 @@ public class PlayerStatsApp
         System.out.println();
 
         loadPlayers("2k23_players_2.csv");
+        Collections.sort(players);
         displayPlayers();
     }
 
     public void loadPlayers(String fileName)
     {
-        // I have to resize the array first - before I can add any new players
-        // figure out how big the new array needs to be
-        int currentSize = players.length;
-        int newSize = currentSize + 5;
-        // create a new temp array that is the new size
-        Player[] tempArray = new Player[newSize];
-        // copy all players from the current array into the new array
-        System.arraycopy(players, 0, tempArray, 0, currentSize);
-        // point the players variable to the new array
-        players = tempArray;
-
-
         // NOW I can read the file and add new players
         try
         {
@@ -42,7 +32,6 @@ public class PlayerStatsApp
             fileScanner.nextLine();
 
             // start adding AFTER the current last player
-            int lineCount = currentSize;
             while (fileScanner.hasNext())
             {
                 String line = fileScanner.nextLine();
@@ -54,9 +43,7 @@ public class PlayerStatsApp
                 int dunk = Integer.parseInt(columns[3]);
 
                 Player player = new Player(name, overall, threes, dunk);
-
-                players[lineCount] = player;
-                lineCount++;
+                players.add(player);
             }
 
         }
@@ -68,9 +55,9 @@ public class PlayerStatsApp
 
     private void displayPlayers()
     {
-        for (int i = 0; i < players.length; i++)
+        for (int i = 0; i < players.size(); i++)
         {
-            Player player = players[i];
+            Player player = players.get(i);
             System.out.printf("%-25s %-3d %-3d %d \n", player.getName(), player.getOverallRating(), player.getThreeRating(), player.getDunkRating());
         }
     }

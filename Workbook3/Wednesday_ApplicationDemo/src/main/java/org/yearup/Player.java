@@ -1,6 +1,6 @@
 package org.yearup;
 
-public class Player
+public class Player implements Comparable<Player>
 {
     private String name;
     private int overallRating;
@@ -57,6 +57,12 @@ public class Player
     public void setDunkRating(int dunkRating)
     {
         this.dunkRating = dunkRating;
+    }
+
+    @Override
+    public int compareTo(Player o)
+    {
+        return this.name.compareTo(o.name);
     }
 }
 
