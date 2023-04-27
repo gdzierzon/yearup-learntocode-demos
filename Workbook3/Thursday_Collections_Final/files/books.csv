@@ -1,0 +1,112 @@
+BookId|ISBN|Title|PublishDate|Category
+1|735609985|Inside Microsoft SQL Server 2000|2001-05-13|Database Administration
+2|0470054034|SQL Server 2005 CLR Programming|2005-11-05|Database Administration
+3|0470257040|SQL Server 2008 Bible|2008-06-06|Database Administration
+4|9780672330568|SQL Server 2008 R2 Unleashed|2010-10-20|Database Administration
+5|1118102282|SQL Server 2012 Programming|2012-05-22|Database Administration
+6|0672337290|SQL Server 2014 Unleashed|2014-09-14|Database Administration
+7|9781119258353|Microsoft SQL Server 2016 Reporting Services and Mobile Reports|2016-07-25|Database Administration
+9|1484250885|Pro SQL Server 2019 Administration|2018-11-01|Database Administration
+10|9781509302000|T-SQL Fundamentals|2001-06-15|Data Science
+11|0735685045|T-SQL Querying|2006-02-21|Data Science
+12|0988330083|SQL Server 2014 Pure T-SQL|2011-08-23|Data Science
+13|1484255895|Pro T-SQL 2019|2017-09-07|Data Science
+14|0470385499|Beginning Database Design|2000-03-16|Data Science
+15|9780321884497|Database Design for Mere Mortals|2005-08-11|Data Science
+16|0134633288|Business Intelligence, Analytics, and Data Science|2005-10-21|Data Science
+17|1118530802|The Data Warehouse Toolkit|2005-08-29|Data Science
+18|1786460998|MDX with Microsoft SQL Server 2016 Analysis Services Cookbook|2002-08-26|Data Science
+19|9780735698352|The Definitive Guide to DAX|2005-08-30|Data Science
+20|1484248961|Pro DAX with Power BI|2016-03-26|Data Science
+21|1846281741|Fast Track to MDX|2016-06-11|Data Science
+22|0471748080|MDX Solutions|2016-01-11|Data Science
+23|9780596520830|Learning SQL|2001-12-23|Data Science
+24|0789732483|Oracle 9i SQL|2001-03-06|Database Administration
+25|0619216298|Guide to Oracle 10g|2003-04-08|Database Administration
+26|0071498508|Oracle Database 11g SQL|2008-12-25|Database Administration
+27|1305251032|Oracle 12c SQL|2014-10-01|Database Administration
+28|1484244230|Pro Oracle Database 18c Administration|2018-04-17|Database Administration
+29|1849510601|MySQL 5.1 Plugin Development|2008-02-11|Database Administration
+30|0672327120|MySQL Crash Course|2010-07-14|Database Administration
+31|0596514263|MySQL Pocket Reference|2013-04-06|Database Administration
+32|0596514336|MySQL In A Nutshell|2015-12-11|Database Administration
+33|0672337703|Sams Teach Yourself PHP, MySQL & JavaScript|2018-06-22|Database Administration
+34|1491963417|PostgreSQL Up & Running|2000-12-22|Database Administration
+35|9780596009762|SQL Cookbook|2005-12-30|Database Administration
+36|1590594789|Beginning Databases with PostgreSQL|2010-10-15|Database Administration
+37|1796506044|PostgreSQL for DBA|2017-06-03|Database Administration
+38|1789535468|Learning PostgreSQL 11|2018-12-19|Database Administration
+39|1576103900|Visual Basic 6 Core Language|2000-02-05|Software Development
+40|1861005652|Visual Basic Interoperability|2000-10-02|Software Development
+41|0596005059|.NET Framework Essentials|2002-08-20|Software Development
+42|0596003196|C# & VB.NET Conversion|2002-03-18|Software Development
+43|1893115550|Visual Basic and Visual Basic.NET for Scientists and Engineers|2003-11-09|Software Development
+44|0130661171|C# for Web Programming|2002-01-28|Software Development
+45|0672326760|Visual C# .NET 2003|2003-06-11|Software Development
+46|0764557084|Beginning ASP.NET 1.1 with Visual C# .NET 2003|2003-07-10|Software Development
+47|0764526286|ASP.NET Professional Secrets|2003-01-25|Software Development
+48|0130893676|Advanced Visual Basic .NET|2003-01-18|Software Development
+49|0072224177|Advanced C# Programming|2003-09-13|Software Development
+50|1430228865|Pro ASP.NET MVC 2 Framework|2005-01-02|Software Development
+51|1788399803|Windows Presentation Foundation Development Cookbook|2005-01-13|Software Development
+52|9780596002503|Programming .NET WebServices|2005-10-22|Software Development
+53|9781484221365|ASP.NET MVC with Entity Framework and CSS|2010-03-30|Software Development
+54|1430257822|Pro ASP.NET Web API Security|2012-07-16|Software Development
+55|0596801688|RESTful Web Services Cookbook|2010-11-03|Software Development
+56|1449358063|RESTful Web APIs|2014-08-02|Software Development
+57|0672336979|WPF 4.5 Unleashed|2008-10-16|Software Development
+58|1430243651|Pro WPF in C# 2012|2009-11-01|Software Development
+59|9780321440068|Essential Windows Communication Foundation|2008-04-01|Software Development
+60|1484230175|Pro C# 7|2017-09-08|Software Development
+61|1484259335|Getting Started with Advanced C#|2015-09-06|Software Development
+62|1617294535|C# in Depth|2017-08-06|Software Development
+63|9780134663708|Learning Node.js|2011-09-07|Software Development
+64|1838558756|Node Cookbook|2013-05-12|Software Development
+65|0134655532|Node.js, MongoDB and AngularJS|2018-07-18|Software Development
+66|1430264489|Pro AngularJS|2010-05-27|Software Development
+67|1973593793|Beginning Angular with TypeScript|2016-03-30|Software Development
+68|1617295345|Angular Development with TypeScript|2017-08-27|Software Development
+69|1492051721|Learning React Modern Patterns for Developing React Apps|2018-03-18|Software Development
+70|1617294624|Vue.js in Action|2018-01-05|Software Development
+71|0134481267|Fundamentals of Web Development|2105-10-02|Software Development
+72|1118340183|Beginning HTML and CSS|2010-10-18|Software Development
+73|0321555570|Styling Web Pages with CSS|2005-09-15|Software Design
+74|1491952024|JavaScript the Definitive Guide|2002-10-27|Software Development
+75|1491947071|JavaScript & jQuery|2010-09-25|Software Development
+76|1484244826|Agile Project Management with Azure DevOps|2018-10-20|Software Development
+77|0135166314|Core Java Volume II - Advanced Features|2004-08-13|Software Development
+78|1119806917|Beginning Programming with Java|2005-06-15|Software Development
+79|1590595130|Pro JSP 2|2006-09-06|Software Development
+80|1617294942|Spring In Action|2007-05-12|Software Development
+81|9781484228074|Pro Spring 5|2007-08-20|Software Development
+82|1801072973|Microservices with Spring Boot and Spring Cloud|2010-10-07|Software Development
+83|3319242784|Object Oriented Analysis, Design and Implementation|2005-04-12|Software Design
+84|1118336925|Beginning Object Oriented Programming with C#|2005-06-18|Software Design
+85|1284089096|Object Oriented Data Structures using Java|2005-08-15|Software Design
+86|1788292480|C# and .NET Core Test-Driven Development|2016-05-21|Software Development
+87|9781932394856|Test Driven Development for Java Developers|2016-03-11|Software Development
+88|1449356370|JavaScript Testing with Jasmine|2017-09-09|Software Development
+89|9780735669116|Microsoft Project 2013 - Step by Step|2007-11-02|Business
+90|1628256648|Project Management Body of Knowledge Guide|2008-01-17|Business
+91|0471749346|Software Project Management for Dummies|2008-05-09|Business
+92|9780735619937|Agile Project Management with SCRUM|2008-07-07|Business
+93|0134841522|Mastering Professional SCRUM|2008-09-03|Business
+94|0078029090|Small Business Management|2007-10-08|Business
+95|0984782869|Cracking the Coding Interview|2017-02-17|Business
+96|0578973839|Ace the Data Science Interview|2016-08-11|Business
+97|0470997869|Small Business Finance for Dummies|2007-01-17|Business
+98|1137373431|Innovation Management - Effective Strategy & Implementation|2018-06-13|Business
+99|0749478829|The Risk Management Handbook|2017-12-03|Business
+100|0136612822|The Hidden Power of Adobe Photoshop|2015-04-08|Graphic Design
+101|0136447996|Adobe Photoshop 2020 Release - Classroom in a Book|2015-09-14|Graphic Design
+102|1118852788|UX for Dummies|2017-03-03|Graphic Design
+103|0134878388|Learn Adobe Illustrator CC for Graphic Design and Ilustration|2016-08-11|Graphic Design
+104|1491912685|UX for Beginners|2018-03-19|Graphic Design
+105|0240807634|Motion Picture and Video Lighting|2017-08-01|Video Production
+106|076454344X|Adobe Premier Pro for Dummies|2015-01-19|Video Production
+107|0134878574|Lern Adobe Premiere Pro CC for Video Communication|2016-03-18|Video Production
+108|1138693499|Video Production Handbook|2017-05-27|Video Production
+109|1138484245|Video Production Techniques|2015-02-28|Video Production
+110|9798986420103|Lights Camera Impact|2018-06-30|Video Production
+111|9780578500461|Video Persuasion|2017-03-17|Video Production
+112|1484241274|Pro SQL Server on Linux|2017-07-11|Database Administration
