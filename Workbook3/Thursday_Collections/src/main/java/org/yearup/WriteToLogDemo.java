@@ -12,8 +12,7 @@ public class WriteToLogDemo
 {
     public static void main(String[] args)
     {
-        logMessage("This is a test");
-        logMessage("another test message");
+        logMessage("Gregor is long winded");
     }
 
     public static void logMessage(String message)

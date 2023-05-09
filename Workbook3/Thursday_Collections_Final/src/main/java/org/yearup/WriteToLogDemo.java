@@ -35,13 +35,16 @@ public class WriteToLogDemo
 
             writer.printf("%s %s %s \n", date, time, message);
         }
-        catch (IOException e)
+        catch (
+                IOException e)
+
         {
             // swallow exception
         }
         finally
+
         {
-            if(writer != null)
+            if (writer != null)
             {
                 writer.close();
             }
