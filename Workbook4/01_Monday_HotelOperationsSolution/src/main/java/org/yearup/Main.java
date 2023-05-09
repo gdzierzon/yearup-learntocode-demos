@@ -15,7 +15,6 @@ public class Main
         employee.punchTimeCard(20);
         displayWork(employee);
 
-
     }
 
     public static void displayWork(Employee employee)
