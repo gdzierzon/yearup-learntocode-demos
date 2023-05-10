@@ -2,6 +2,7 @@ package org.yearup;
 
 public class Room
 {
+    private static final String KING = "King";
 
     // private variables
     private int numberOfBeds;
