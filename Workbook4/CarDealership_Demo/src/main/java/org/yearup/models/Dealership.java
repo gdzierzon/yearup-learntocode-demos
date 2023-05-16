@@ -1,6 +1,5 @@
 package org.yearup.models;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Dealership
@@ -60,12 +59,35 @@ public class Dealership
 
     public ArrayList<Vehicle> getByPrice(double min, double max)
     {
-        return new ArrayList<>();
+        ArrayList<Vehicle> searchResults = new ArrayList<>();
+
+        for(Vehicle vehicle: inventory)
+        {
+            if(vehicle.getPrice() >= min && vehicle.getPrice() <= max)
+            {
+                searchResults.add(vehicle);
+            }
+        }
+
+        return searchResults;
     }
 
     public ArrayList<Vehicle> getByMakeModel(String make, String model)
     {
-        return new ArrayList<>();
+        ArrayList<Vehicle> searchResults = new ArrayList<>();
+        make = make.strip().toLowerCase();
+        model = model.strip().toLowerCase();
+
+        for(Vehicle vehicle: inventory)
+        {
+            if(vehicle.getMake().toLowerCase().contains(make) &&
+                    vehicle.getModel().toLowerCase().contains(model))
+            {
+                searchResults.add(vehicle);
+            }
+        }
+
+        return searchResults;
     }
 
     public ArrayList<Vehicle> getByYear(int min, int max)
@@ -85,17 +107,47 @@ public class Dealership
 
     public ArrayList<Vehicle> getByColor(String color)
     {
-        return new ArrayList<>();
+        ArrayList<Vehicle> searchResults = new ArrayList<>();
+
+        for(Vehicle vehicle: inventory)
+        {
+            if(vehicle.getColor().equalsIgnoreCase(color.strip()))
+            {
+                searchResults.add(vehicle);
+            }
+        }
+
+        return searchResults;
     }
 
     public ArrayList<Vehicle> getByMileage(int min, int max)
     {
-        return new ArrayList<>();
+        ArrayList<Vehicle> searchResults = new ArrayList<>();
+
+        for(Vehicle vehicle: inventory)
+        {
+            if(vehicle.getOdometer() >= min && vehicle.getOdometer() <= max)
+            {
+                searchResults.add(vehicle);
+            }
+        }
+
+        return searchResults;
     }
 
     public ArrayList<Vehicle> getByType(String type)
     {
-        return new ArrayList<>();
+        ArrayList<Vehicle> searchResults = new ArrayList<>();
+
+        for(Vehicle vehicle: inventory)
+        {
+            if(vehicle.getType().equalsIgnoreCase(type.strip()))
+            {
+                searchResults.add(vehicle);
+            }
+        }
+
+        return searchResults;
     }
 
     public ArrayList<Vehicle> getAllVehicles()
@@ -111,5 +163,18 @@ public class Dealership
     public void removeVehicle(Vehicle vehicle)
     {
         inventory.remove(vehicle);
+    }
+
+    public Vehicle findByVin(String vin)
+    {
+        for(Vehicle vehicle: inventory)
+        {
+            if(vehicle.getVin().equalsIgnoreCase(vin))
+            {
+                return vehicle;
+            }
+        }
+
+        return null;
     }
 }

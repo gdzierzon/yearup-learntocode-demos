@@ -3,8 +3,7 @@ package org.yearup.datastorage;
 import org.yearup.models.Dealership;
 import org.yearup.models.Vehicle;
 
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -54,6 +53,16 @@ public class DealershipFileManager
 
     public void saveDealership(Dealership dealership)
     {
-
+        try(PrintWriter writer = new PrintWriter("inventory.csv"))
+        {
+            writer.printf("%s|%s|%s\n", dealership.getName(), dealership.getAddress(), dealership.getPhone());
+            for(Vehicle vehicle: dealership.getAllVehicles())
+            {
+                writer.printf("%s|%d|%s|%s|%s|%s|%d|%.2f\n", vehicle.getVin(), vehicle.getYear(), vehicle.getMake(), vehicle.getModel(), vehicle.getType(), vehicle.getColor(), vehicle.getOdometer(), vehicle.getPrice());
+            }
+        }
+        catch (IOException e)
+        {
+        }
     }
 }
