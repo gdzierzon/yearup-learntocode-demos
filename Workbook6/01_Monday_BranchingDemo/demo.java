@@ -1,14 +1,16 @@
-public class Char
+public class Vehicle
 {
 	private int id;
 	private String make;
 	private String model;
+	private doulbe price;
 
-	public Car(int id, String make, String model)
+	public Vehicle(int id, String make, String model, double price)
 	{
 		this.id = id;
 		this.make = make;
 		this.model = model;
+		this.price = price;
 	}
 
 	public int getId()
