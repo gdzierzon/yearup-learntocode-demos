@@ -1,93 +1,12 @@
-package org.yearup;
+package org.yearup.datastorage;
+
+import org.yearup.models.Product;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
-public class Main
+public class ProductManager
 {
-    public static void main(String[] args)
-    {
-//        demoFilter();
-        demoMaxMinPrice();
-    }
-
-    public static void demoFilter()
-    {
-        List<Product> products = loadProducts();
-
-        var searchResults = products.stream()
-                .filter(product -> product.getPrice() >= 10 && product.getPrice() <= 18)
-                .filter(product -> product.getCategory().equalsIgnoreCase("Beverages"))
-                .collect(Collectors.toList());
-
-        for(var product: searchResults)
-        {
-            System.out.println("(" + product.getCategory() + ") " +  product.getName() + " $" + product.getPrice());
-        }
-    }
-
-    public static void demoMaxMinPrice()
-    {
-        var products = loadProducts();
-
-//        var prices = products.stream()
-//                .map(product -> product.getPrice())
-//                .toList();
-
-        var max = products.stream()
-                .map(product -> product.getPrice())
-                .sorted()
-                .reduce(0.0, (price, collector) -> price > collector ? price : collector);
-
-        var min = products.stream()
-                .map(product -> product.getPrice())
-                .reduce(9999.99, (price, collector) -> price < collector ? price : collector);
-
-//        double collector = 0.0;
-//        for(var price : prices)
-//        {
-//            collector = price > collector ? price : collector;
-//        }
-
-        System.out.println("Max price is: " + max);
-        System.out.println("Min price is: " + min);
-
-
-
-//
-//        prices.forEach(price -> {
-//            System.out.println(price);
-//        });
-
-    }
-
-    public static boolean isCheap(Product product)
-    {
-        return product.getPrice() < 10;
-    }
-
-    public static boolean isInPriceRange(Product p, double min, double max)
-    {
-        return p.getPrice() >= min && p.getPrice() <= max;
-    }
-
-//
-//    public static List<Product> filterByPrice(List<Product> products, double min, double max)
-//    {
-//        List<Product> filteredProducts = new ArrayList<>();
-//
-//        for (var product: products)
-//        {
-//            if(product.getPrice() >= min && product.getPrice() <= max)
-//            {
-//                filteredProducts.add(product);
-//            }
-//        }
-//
-//        return filteredProducts;
-//    }
 
     public static List<Product> loadProducts()
     {
@@ -172,5 +91,4 @@ public class Main
 
         return products;
     }
-
 }
