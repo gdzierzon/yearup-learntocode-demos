@@ -57,6 +57,36 @@ SELECT p.person_id
 FROM person AS p 
 RIGHT JOIN task AS t -- OUTER is implied
 	ON t.person_id = p.person_id;
+    
+/****************************
+	  FULL OUTER JOIN
+****************************/
+-- MySQL does NOT support FULL OUTER JOIN directly
+-- this means that MySQL is not ANSI compliant in this regard
+-- you can fake a FULL JOIN though
+
+-- use a UNION statement
+-- to combine a LEFT JOIN
+-- and a RIGHT JOIN
+SELECT p.person_id
+	, p.person_name
+    , t.task_id
+    , t.task_name
+FROM person AS p 
+LEFT OUTER JOIN task AS t
+	ON t.person_id = p.person_id
+    
+UNION
+
+SELECT p.person_id
+	, p.person_name
+    , t.task_id
+    , t.task_name
+FROM person AS p 
+RIGHT OUTER JOIN task AS t
+	ON t.person_id = p.person_id;
+    
+    
 
 
 -- Give me every person who DOES NOT have a job
