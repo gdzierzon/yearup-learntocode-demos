@@ -6,13 +6,13 @@ import org.yearup.models.Student;
 import java.util.HashMap;
 
 @Component
-public class MemoryRegistrationService implements RegistrationDao
+public class MemoryRegistrationDao implements RegistrationDao
 {
 
     private HashMap<Long, Student> hashMap;
     private Long counter = 60L;
 
-    public MemoryRegistrationService() {
+    public MemoryRegistrationDao() {
         this.hashMap = new HashMap<Long, Student>();
 
         this.hashMap.put(10L,

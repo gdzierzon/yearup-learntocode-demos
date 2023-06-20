@@ -1,10 +1,9 @@
 package org.yearup.data;
 
-import org.springframework.stereotype.Component;
 import org.yearup.models.Student;
 
 //@Component
-public class MySqlRegistrationService implements RegistrationDao
+public class MySqlRegistrationDao implements RegistrationDao
 {
     @Override
     public Long persistStudent(Student student)

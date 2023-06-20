@@ -2,7 +2,6 @@ package org.yearup;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.yearup.data.MemoryRegistrationService;
 import org.yearup.data.RegistrationDao;
 import org.yearup.models.Student;
 
