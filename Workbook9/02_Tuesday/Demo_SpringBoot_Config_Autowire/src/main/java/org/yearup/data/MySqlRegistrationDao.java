@@ -1,16 +1,21 @@
 package org.yearup.data;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.yearup.models.Student;
+
+import javax.sql.DataSource;
 
 @Component
 public class MySqlRegistrationDao implements  RegistrationDao
 {
-    public MySqlRegistrationDao()
+    private DataSource dataSource;
+
+    // constructor injection
+    @Autowired
+    public MySqlRegistrationDao(DataSource dataSource)
     {
-        System.out.println();
-        System.out.println("Registration DAO");
-        System.out.println();
+        this.dataSource = dataSource;
     }
 
     @Override

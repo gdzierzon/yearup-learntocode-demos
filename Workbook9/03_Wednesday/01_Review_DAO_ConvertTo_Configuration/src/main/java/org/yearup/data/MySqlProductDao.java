@@ -1,5 +1,7 @@
 package org.yearup.data;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.yearup.models.Product;
 
 import javax.sql.DataSource;
@@ -8,10 +10,12 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class MySqlProductDao implements ProductDao
 {
     private DataSource dataSource;
 
+    @Autowired
     public MySqlProductDao(DataSource dataSource)
     {
         this.dataSource = dataSource;

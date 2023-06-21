@@ -4,15 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Student
 {
-    @Autowired
-    @Qualifier("defaultFirstName")
+//    @Autowired
+//    @Qualifier("defaultFirstName")
     private String firstName;
 
-    @Autowired
-    @Qualifier("defaultLastName")
+//    @Autowired
+//    @Qualifier("defaultLastName")
     private String lastName;
 
 

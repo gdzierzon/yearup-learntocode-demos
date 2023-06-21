@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
+import javax.xml.crypto.Data;
 
 @Configuration
 public class AppConfig
@@ -16,14 +17,13 @@ public class AppConfig
     @Bean
     public DataSource dataSource()
     {
-        return dataSource;
+        return this.dataSource;
     }
 
-
     @Autowired
-    public AppConfig(@Value("${datasource.url}") String url,
-                     @Value("${datasource.username}") String username,
-                     @Value("${datasource.password}") String password)
+    public AppConfig(@Value("${database.url}") String url,
+                     @Value("${database.username}") String username,
+                     @Value("${database.password}") String password)
     {
         dataSource = new BasicDataSource()
         {{
@@ -31,18 +31,5 @@ public class AppConfig
             setUsername(username);
             setPassword(password);
         }};
-
-    }
-
-    @Bean
-    public String defaultFirstName()
-    {
-        return "Gregor";
-    }
-
-    @Bean
-    public String defaultLastName()
-    {
-        return "Dzierzon";
     }
 }

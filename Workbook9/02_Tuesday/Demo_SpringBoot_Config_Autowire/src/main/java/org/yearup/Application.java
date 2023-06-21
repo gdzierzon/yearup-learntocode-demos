@@ -1,42 +1,28 @@
 package org.yearup;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.yearup.models.Student;
-
-import javax.sql.DataSource;
+import org.yearup.data.RegistrationDao;
 
 @Component
 public class Application implements CommandLineRunner
 {
-    @Autowired
-    @Qualifier("defaultLastName")
-    private String name;
+//    // property injection
+//    @Autowired
+//    private DataSource dataSource;
 
-    private DataSource dataSource;
+    private RegistrationDao dao;
 
-//    public Application()
-//    {
-//        System.out.println();
-//        System.out.println("Application");
-//        System.out.println();
-//    }
     @Autowired
-    public Application(DataSource dataSource)
+    public Application(RegistrationDao dao)
     {
-        this.dataSource = dataSource;
+        this.dao = dao;
     }
 
     @Override
     public void run(String... args) throws Exception
     {
-        System.out.println("running application");
-        System.out.println();
-        System.out.println("Data Source");
-        System.out.println("---------------------------");
-        System.out.println(name);
-//        System.out.println(dataSource.getConnection());
+//        dao.register(null);
     }
 }

@@ -1,23 +1,29 @@
 package org.yearup.application;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 import org.yearup.data.ProductDao;
 import org.yearup.models.Product;
 
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-public class Application
+@Component
+public class Application implements CommandLineRunner
 {
     private Scanner userInput = new Scanner(System.in);
 
     private ProductDao productDao;
 
+    @Autowired
     public Application(ProductDao productDao)
     {
         this.productDao = productDao;
     }
 
-    public void run()
+    @Override
+    public void run(String... args) throws Exception
     {
         while(true)
         {
