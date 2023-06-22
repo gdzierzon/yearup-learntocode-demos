@@ -15,7 +15,12 @@ import javax.sql.DataSource;
 public class DemoSpringBootApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoSpringBootApplication.class, args);
+		var context = SpringApplication.run(DemoSpringBootApplication.class, args);
+
+		for(var name: context.getBeanDefinitionNames())
+		{
+			System.out.println(name);
+		}
 
 	}
 
