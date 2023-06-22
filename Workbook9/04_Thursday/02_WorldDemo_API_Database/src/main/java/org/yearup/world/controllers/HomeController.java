@@ -5,17 +5,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class HomeController
 {
-    // http://localhost:8080
-    // http://localhost:8080?country=Germany
     @GetMapping(path = "")
-    public String getGreeting(@RequestParam(required = false) String country)
+    public String getGreeting()
     {
-        if(country == null)
-        {
-            return "Hello World!";
-        }
-
-        return "Hello " + country;
+        return "Hello World!";
     }
 
 //    @GetMapping(path = "greetings/hello")
