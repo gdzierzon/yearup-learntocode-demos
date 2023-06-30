@@ -31,16 +31,18 @@ public class DemoController
         return "Hello World";
     }
 
-    @PreAuthorize("authenticated()")
+    // you have to be logged in
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("secured")
-    public String getUserName(Principal principal)
+    public String getUserName(Principal principal) // Principal = name tag
     {
         return "Hello " + principal.getName();
     }
 
+    // you must be an ADMIN
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("admin")
-    public String getAdminId(Principal principal)
+    public String getAdminId(Principal principal) // principal = name tag
     {
         User user = userDao.getByUserName(principal.getName());
 
